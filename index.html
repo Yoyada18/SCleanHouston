@@ -58,15 +58,99 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="bg-white py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">About Us</h2>
-      <p class="max-w-2xl mx-auto text-lg">
-        We are a Houston-based cleaning company committed to making your home sparkle.
-        Our trained team provides reliable, affordable, and high-quality cleaning tailored to your needs.
-      </p>
+<section id="services" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Basic Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2 text-center">Basic Cleaning</h3>
+      <button id="basic-btn" onclick="toggleCard('basic-details', 'basic-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+      <div id="basic-details" class="hidden mt-2 text-sm text-left">
+        <p class="font-semibold">Standard Service</p>
+
+        <p class="font-semibold mt-2">All Rooms:</p>
+        <ul class="list-disc list-inside">
+          <li>Dust & clean furniture</li>
+          <li>Clean light switches</li>
+          <li>Clean TV screens</li>
+          <li>Pick up & straighten</li>
+          <li>Make beds</li>
+          <li>Change linens (if left on the bed)</li>
+          <li>Vacuum carpeting</li>
+          <li>Sweep & mop floors</li>
+          <li>Empty wastebaskets</li>
+        </ul>
+
+        <p class="font-semibold mt-2">Bathrooms:</p>
+        <ul class="list-disc list-inside">
+          <li>Clean & disinfect toilets, tubs & showers</li>
+          <li>Clean sinks & counters</li>
+          <li>Clean mirrors & polish chrome</li>
+          <li>Sweep & mop floors</li>
+          <li>Change towels (if left for us)</li>
+        </ul>
+
+        <p class="font-semibold mt-2">Kitchen:</p>
+        <ul class="list-disc list-inside">
+          <li>Clean & sanitize sinks</li>
+          <li>Polish chrome</li>
+          <li>Wipe down countertops & cabinets</li>
+          <li>Clean appliance exteriors</li>
+          <li>Load dishwasher (based on client request)</li>
+          <li>Clean inside microwave</li>
+          <li>Sweep & mop floors</li>
+        </ul>
+      </div>
     </div>
-  </section>
+
+    <!-- Deep Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2 text-center">Deep Cleaning</h3>
+      <button id="deep-btn" onclick="toggleCard('deep-details', 'deep-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+      <div id="deep-details" class="hidden mt-2 text-sm text-left">
+        <ul class="list-disc list-inside">
+          <li>Everything in Basic Cleaning</li>
+          <li>Scrub baseboards & walls</li>
+          <li>Clean inside cabinets & drawers</li>
+          <li>Clean behind appliances</li>
+          <li>Polish furniture & fixtures</li>
+          <li>Spot clean windows & doors</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Move-Out Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2 text-center">Move-Out Cleaning</h3>
+      <button id="move-btn" onclick="toggleCard('move-details', 'move-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+      <div id="move-details" class="hidden mt-2 text-sm text-left">
+        <ul class="list-disc list-inside">
+          <li>Everything in Deep Cleaning</li>
+          <li>Remove all trash</li>
+          <li>Clean inside oven & fridge</li>
+          <li>Clean all floors thoroughly</li>
+          <li>Final inspection to ensure spotless home</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript for toggling details -->
+<script>
+  function toggleCard(cardId, btnId) {
+    const card = document.getElementById(cardId);
+    const btn = document.getElementById(btnId);
+    card.classList.toggle('hidden');
+    btn.innerText = card.classList.contains('hidden') ? "View Details" : "Hide Details";
+  }
+</script>
+
 
   <!-- Contact Section -->
   <section id="contact" class="container mx-auto py-16 px-4 text-center">
