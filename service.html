@@ -1,87 +1,36 @@
-<section id="services" class="container mx-auto py-16 px-4">
-  <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-  <div class="grid md:grid-cols-3 gap-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>S Cleaning Services</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Basic Cleaning Card -->
-    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2 text-center">Basic Cleaning</h3>
-      <button onclick="toggleCard('basic')" class="text-blue-600 hover:underline mb-2">View Details</button>
-      <div id="basic" class="hidden text-sm">
-        <p class="font-semibold mb-1">Standard Service</p>
+  <section>
+    <h2>Our Cleaning Services</h2>
+    <ul>
+      <li><strong>Residential Cleaning:</strong> Weekly, biweekly, or one-time deep cleans.</li>
+      <li><strong>Office Cleaning:</strong> Customized plans for clean, productive workspaces.</li>
+      <li><strong>Move-In / Move-Out Cleaning:</strong> Full-service cleaning for a fresh start.</li>
+      <li><strong>Specialized Services:</strong> Carpet cleaning, window cleaning, and more.</li>
+      <li><strong>Optional Eco-Friendly Cleaning:</strong> Environmentally safe products on request.</li>
+    </ul>
+  </section>
 
-        <p class="font-semibold mt-2">All Rooms:</p>
-        <ul class="list-disc list-inside mb-2">
-          <li>Dust & clean furniture</li>
-          <li>Clean light switches</li>
-          <li>Clean TV screens</li>
-          <li>Pick up & straighten</li>
-          <li>Make beds</li>
-          <li>Change linens (if left on the bed)</li>
-          <li>Vacuum carpeting</li>
-          <li>Sweep & mop floors</li>
-          <li>Empty wastebaskets</li>
-        </ul>
-
-        <p class="font-semibold mt-2">Bathrooms:</p>
-        <ul class="list-disc list-inside mb-2">
-          <li>Clean & disinfect toilets, tubs & showers</li>
-          <li>Clean sinks & counters</li>
-          <li>Clean mirrors & polish chrome</li>
-          <li>Sweep & mop floors</li>
-          <li>Change towels (if left for us)</li>
-        </ul>
-
-        <p class="font-semibold mt-2">Kitchen:</p>
-        <ul class="list-disc list-inside mb-2">
-          <li>Clean & sanitize sinks</li>
-          <li>Polish chrome</li>
-          <li>Wipe down countertops & cabinets</li>
-          <li>Clean appliance exteriors</li>
-          <li>Load dishwasher (based on client request)</li>
-          <li>Clean inside microwave</li>
-          <li>Sweep & mop floors</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Deep Cleaning Card -->
-    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2 text-center">Deep Cleaning</h3>
-      <button onclick="toggleCard('deep')" class="text-blue-600 hover:underline mb-2">View Details</button>
-      <div id="deep" class="hidden text-sm">
-        <ul class="list-disc list-inside">
-          <li>Everything in Basic Cleaning</li>
-          <li>Scrub baseboards & walls</li>
-          <li>Clean inside cabinets & drawers</li>
-          <li>Clean behind appliances</li>
-          <li>Polish furniture & fixtures</li>
-          <li>Spot clean windows & doors</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Move-Out Cleaning Card -->
-    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2 text-center">Move-Out Cleaning</h3>
-      <button onclick="toggleCard('move')" class="text-blue-600 hover:underline mb-2">View Details</button>
-      <div id="move" class="hidden text-sm">
-        <ul class="list-disc list-inside">
-          <li>Everything in Deep Cleaning</li>
-          <li>Remove all trash</li>
-          <li>Clean inside oven & fridge</li>
-          <li>Clean all floors thoroughly</li>
-          <li>Final inspection to ensure spotless home</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- JavaScript for toggling -->
-<script>
-  function toggleCard(id) {
-    const card = document.getElementById(id);
-    card.classList.toggle('hidden');
-  }
-</script>
+  <footer>
+    <p>&copy; 2025 S Cleaning Services | Houston, TX</p>
+  </footer>
+</body>
+</html>
+</html>
