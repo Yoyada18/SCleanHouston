@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Cleaning | S-Cleaning Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <header class="bg-blue-700 text-white py-6 text-center">
+    <h1 class="text-3xl font-bold">Book Your Cleaning</h1>
+  </header>
+
+  <main class="max-w-xl mx-auto p-6 bg-white mt-8 rounded shadow">
+    <form action="#" method="POST" class="space-y-4">
+      <label class="block">
+        <span class="text-gray-700">Full Name</span>
+        <input type="text" name="name" required class="mt-1 block w-full border rounded px-3 py-2">
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Email</span>
+        <input type="email" name="email" required class="mt-1 block w-full border rounded px-3 py-2">
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Phone</span>
+        <input type="tel" name="phone" required class="mt-1 block w-full border rounded px-3 py-2">
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Service Type</span>
+        <select name="service" class="mt-1 block w-full border rounded px-3 py-2">
+          <option value="basic">Basic Cleaning</option>
+          <option value="deep">Deep Cleaning</option>
+          <option value="move-out">Move-Out Cleaning</option>
+        </select>
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Preferred Date</span>
+        <input type="date" name="date" required class="mt-1 block w-full border rounded px-3 py-2">
+      </label>
+
+      <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 rounded-lg shadow-lg transition">
+        Submit Booking
+      </button>
+    </form>
+  </main>
+
+</body>
+</html>
