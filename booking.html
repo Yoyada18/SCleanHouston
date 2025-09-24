@@ -1,97 +1,147 @@
+@@ -1,146 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Your Cleaning | S-Cleaning Houston</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; color:#333; line-height:1.6; }
+    a { text-decoration:none; }
+    header { background:#0d6efd; color:white; padding:80px 20px; text-align:center; }
+    header h1 { font-size:3em; margin-bottom:10px; }
+    header p { font-size:1.2em; margin-bottom:20px; }
+
+    /* CTA Button */
+    .btn { background:#ffc107; color:#333; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s; display:inline-block; }
+    .btn:hover { background:#e0a800; }
+
+    /* Section Styling */
+    section { padding:60px 20px; max-width:1000px; margin:0 auto; }
+
+    h2 { text-align:center; color:#0d6efd; margin-bottom:30px; }
+
+    /* Form & Container */
+    .contact-container { background:#f8f9fa; padding:40px 30px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+    .booking-form { display:flex; flex-direction:column; gap:20px; }
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea { padding:15px; border:1px solid #ccc; border-radius:8px; font-size:1em; transition:0.3s; }
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus { outline:none; border-color:#0d6efd; box-shadow:0 0 8px rgba(13,110,253,0.3); }
+    .booking-form button { padding:15px; border:none; border-radius:8px; background:#0d6efd; color:white; font-weight:bold; font-size:1.1em; cursor:pointer; transition:0.3s; }
+    .booking-form button:hover { background:#0b5ed7; transform:translateY(-2px); }
+
+    /* Benefits Section */
+    .benefits { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-bottom:40px; }
+    .benefit { flex:1 1 250px; background:white; padding:20px; border-radius:10px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+    .benefit img { width:50px; margin-bottom:15px; }
+
+    /* Thank You Popup */
+    #thankYouPopup {
+      display:none;
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background:white;
+      padding:30px 40px;
+      border-radius:15px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.2);
+      text-align:center;
+      z-index:1000;
+    }
+    #thankYouPopup button { margin-top:20px; background:#0d6efd; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; }
+
+    @media(max-width:768px){ .contact-container, .benefit { width:100%; } }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Hero Section -->
   <header>
-    <h1>S-Cleaning Services</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="booking.html">Booking</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Book Your Cleaning Today</h1>
+    <p>Reliable, professional, and friendly residential cleaning in Houston</p>
+    <a href="#booking" class="btn">Book Now</a>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Book Your Cleaning Today</h1>
-    <p>Reliable, professional residential and office cleaning in Houston—tailored to your busy life.</p>
-    <a href="#booking-form" class="cta-button">Book Now</a>
+  <!-- Benefits Section -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/user-male-circle.png" alt="Professional Staff">
+        <h3>Professional Staff</h3>
+        <p>Our trained team ensures top-quality cleaning every time.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/clock.png" alt="Flexible Scheduling">
+        <h3>Flexible Scheduling</h3>
+        <p>Book cleaning at a time that fits your schedule perfectly.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/checked.png" alt="Satisfaction Guarantee">
+        <h3>Satisfaction Guaranteed</h3>
+        <p>We’re not happy until you are — 100% satisfaction guaranteed.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Pricing & Services -->
-  <section class="highlights">
-    <h2>Pricing Options</h2>
-    <table style="width:100%; border-collapse: collapse; margin-top:20px;">
-      <tr style="background:#0077cc; color:white;">
-        <th style="padding:10px; text-align:left;">Service</th>
-        <th style="padding:10px; text-align:left;">Starting Price</th>
-        <th style="padding:10px; text-align:left;">Details</th>
-      </tr>
-      <tr>
-        <td style="padding:10px;">Weekly Clean</td>
-        <td style="padding:10px;">$99</td>
-        <td style="padding:10px;">2-3 hours, recurring discount.</td>
-      </tr>
-      <tr>
-        <td style="padding:10px;">Deep Clean</td>
-        <td style="padding:10px;">$149</td>
-        <td style="padding:10px;">Full home scrub, ideal for seasonal refresh.</td>
-      </tr>
-      <tr>
-        <td style="padding:10px;">Office Clean</td>
-        <td style="padding:10px;">$199</td>
-        <td style="padding:10px;">Professional office space cleaning.</td>
-      </tr>
-    </table>
+  <!-- Booking Form Section -->
+  <section id="booking">
+    <h2>Book Your Cleaning</h2>
+    <p style="text-align:center; margin-bottom:20px;">Fill out the form below and we’ll contact you quickly!</p>
+    <div class="contact-container">
+      <form id="bookingForm" action="https://formspree.io/f/manpylny" method="POST" class="booking-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Your Phone">
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option value="Basic Cleaning">Basic Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
+          <option value="Move-Out Cleaning">Move-Out Cleaning</option>
+        </select>
+        <textarea name="message" placeholder="Additional Details" rows="5"></textarea>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
   </section>
 
-  <!-- Booking Form -->
-  <section id="booking-form" class="contact-container">
-    <h2>Quick Booking Form</h2>
-    <form class="booking-form" action="https://formspree.io/f/manpylny" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number">
-      <select name="service" required>
-        <option value="">Select Service</option>
-        <option value="weekly">Weekly Clean</option>
-        <option value="deep">Deep Clean</option>
-        <option value="office">Office Clean</option>
-      </select>
-      <input type="date" name="date" required>
-      <textarea name="address" placeholder="Your Address in Houston" rows="3" required></textarea>
-      <textarea name="notes" placeholder="Special Requests (e.g., pet-friendly products)"></textarea>
-      <button type="submit" class="cta-button">Submit Booking Request</button>
-    </form>
-    <p style="text-align:center; margin-top:15px; font-size:0.9em;">We'll call to confirm within 24 hours. 10% off your first booking!</p>
-  </section>
+  <!-- Thank You Popup -->
+  <div id="thankYouPopup">
+    <h3>Thank you!</h3>
+    <p>Your booking request has been sent. We will contact you shortly.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="highlights">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@scleaninghouston.com">info@scleaninghouston.com</a></p>
-    <p>Phone: <a href="tel:+17135551234">(713) 555-1234</a></p>
-  </section>
+  <script>
+    const form = document.getElementById('bookingForm');
+    const popup = document.getElementById('thankYouPopup');
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 S-Cleaning Services Houston | All rights reserved.</p>
-  </footer>
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if(response.ok){
+          popup.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Oops! There was a problem submitting your form.');
+        }
+      }).catch(error => alert('Oops! There was a problem submitting your form.'));
+    });
+
+    function closePopup(){
+      popup.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
-
 
