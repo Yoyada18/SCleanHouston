@@ -3,125 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S-Cleaning Services Houston</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>S Cleaning Services Houston</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="font-sans bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header>
-    <h1>S-Cleaning Services</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="booking.html">Book Now</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">S Cleaning Services</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline hover:text-yellow-400 transition">Home</a>
+        <a href="booking.html" class="hover:underline hover:text-yellow-400 transition">Book Now</a>
+        <a href="about.html" class="hover:underline hover:text-yellow-400 transition">About</a>
+        <a href="contact.html" class="hover:underline hover:text-yellow-400 transition">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <img src="https://images.unsplash.com/photo-1601597115039-62aeb5d3d0cd?auto=format&fit=crop&w=1950&q=80" alt="Cleaning">
-    <h1>Professional Residential Cleaning in Houston</h1>
-    <p>Affordable, reliable, and detailed cleaning services for your home.</p>
-    <a href="booking.html" class="cta-button">Book Your Cleaning Now</a>
+  <section class="relative h-screen flex items-center justify-center text-center bg-gray-100">
+    <img src="https://images.unsplash.com/photo-1601597115039-62aeb5d3d0cd?auto=format&fit=crop&w=1950&q=80"
+         alt="Cleaning"
+         class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-600/70 to-blue-400/30"></div>
+
+    <div class="relative z-10 max-w-2xl px-4">
+      <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">
+        Professional Residential Cleaning in Houston
+      </h1>
+      <p class="text-xl md:text-2xl text-white drop-shadow-md mb-6">
+        Affordable, reliable, and detailed cleaning services tailored to your needs.
+      </p>
+      <a href="booking.html"
+         class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 rounded-lg shadow-lg transition-all hover:scale-105">
+         Book Your Cleaning Now
+      </a>
+    </div>
   </section>
 
   <!-- Services Section -->
-  <section class="services">
-    <!-- Basic Cleaning -->
-    <div class="card">
-      <h3>Basic Cleaning</h3>
-      <button onclick="toggleCard('basic-details')">View Details</button>
-      <div id="basic-details" class="hidden">
-        <p><strong>All Rooms:</strong></p>
-        <ul>
-          <li>Dust & clean furniture</li>
-          <li>Clean light switches</li>
-          <li>Clean TV screens</li>
-          <li>Pick up & straighten</li>
-          <li>Make beds</li>
-          <li>Change linens (if left on the bed)</li>
-          <li>Vacuum carpeting</li>
-          <li>Sweep & mop floors</li>
-          <li>Empty wastebaskets</li>
-        </ul>
-        <p><strong>Bathrooms:</strong></p>
-        <ul>
-          <li>Clean & disinfect toilets, tubs & showers</li>
-          <li>Clean sinks & counters</li>
-          <li>Clean mirrors & polish chrome</li>
-          <li>Sweep & mop floors</li>
-          <li>Change towels (if left for us)</li>
-        </ul>
-        <p><strong>Kitchen:</strong></p>
-        <ul>
-          <li>Clean & sanitize sinks</li>
-          <li>Polish chrome</li>
-          <li>Wipe down countertops & cabinets</li>
-          <li>Clean appliance exteriors</li>
-          <li>Load dishwasher (based on client request)</li>
-          <li>Clean inside microwave</li>
-          <li>Sweep & mop floors</li>
-        </ul>
-      </div>
-    </div>
+  <section id="services" class="container mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
 
-    <!-- Deep Cleaning -->
-    <div class="card">
-      <h3>Deep Cleaning</h3>
-      <button onclick="toggleCard('deep-details')">View Details</button>
-      <div id="deep-details" class="hidden">
-        <ul>
-          <li>Everything in Basic Cleaning</li>
-          <li>Scrub baseboards & walls</li>
-          <li>Clean inside cabinets & drawers</li>
-          <li>Clean behind appliances</li>
-          <li>Polish furniture & fixtures</li>
-          <li>Spot clean windows & doors</li>
-        </ul>
+      <!-- Basic Cleaning Card -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+        <h3 class="text-xl font-semibold mb-2 text-center">Basic Cleaning</h3>
+        <button id="basic-btn" onclick="toggleCard('basic-details', 'basic-btn')" 
+                class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+        <div id="basic-details" class="hidden mt-2 text-sm text-left">
+          <p class="font-semibold">Standard Service</p>
+          <p class="font-semibold mt-2">All Rooms:</p>
+          <ul class="list-disc list-inside">
+            <li>Dust & clean furniture</li>
+            <li>Clean light switches</li>
+            <li>Clean TV screens</li>
+            <li>Pick up & straighten</li>
+            <li>Make beds</li>
+            <li>Change linens (if left on the bed)</li>
+            <li>Vacuum carpeting</li>
+            <li>Sweep & mop floors</li>
+            <li>Empty wastebaskets</li>
+          </ul>
+          <p class="font-semibold mt-2">Bathrooms:</p>
+          <ul class="list-disc list-inside">
+            <li>Clean & disinfect toilets, tubs & showers</li>
+            <li>Clean sinks & counters</li>
+            <li>Clean mirrors & polish chrome</li>
+            <li>Sweep & mop floors</li>
+            <li>Change towels (if left for us)</li>
+          </ul>
+          <p class="font-semibold mt-2">Kitchen:</p>
+          <ul class="list-disc list-inside">
+            <li>Clean & sanitize sinks</li>
+            <li>Polish chrome</li>
+            <li>Wipe down countertops & cabinets</li>
+            <li>Clean appliance exteriors</li>
+            <li>Load dishwasher (based on client request)</li>
+            <li>Clean inside microwave</li>
+            <li>Sweep & mop floors</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <!-- Office Cleaning -->
-    <div class="card">
-      <h3>Office Cleaning</h3>
-      <button onclick="toggleCard('office-details')">View Details</button>
-      <div id="office-details" class="hidden">
-        <ul>
-          <li>Dust and wipe all work surfaces</li>
-          <li>Sanitize desks, phones, and keyboards</li>
-          <li>Empty trash & replace liners</li>
-          <li>Vacuum carpets & sweep/mop floors</li>
-          <li>Clean kitchen or breakroom areas</li>
-          <li>Restroom sanitization</li>
-        </ul>
+      <!-- Deep Cleaning Card -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+        <h3 class="text-xl font-semibold mb-2 text-center">Deep Cleaning</h3>
+        <button id="deep-btn" onclick="toggleCard('deep-details', 'deep-btn')" 
+                class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+        <div id="deep-details" class="hidden mt-2 text-sm text-left">
+          <ul class="list-disc list-inside">
+            <li>Everything in Basic Cleaning</li>
+            <li>Scrub baseboards & walls</li>
+            <li>Clean inside cabinets & drawers</li>
+            <li>Clean behind appliances</li>
+            <li>Polish furniture & fixtures</li>
+            <li>Spot clean windows & doors</li>
+          </ul>
+        </div>
       </div>
+
+      <!-- Move-Out Cleaning Card -->
+<!-- Office Cleaning Card -->
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+  <h3 class="text-xl font-semibold mb-2 text-center">Office Cleaning</h3>
+  <button id="office-btn" onclick="toggleCard('office-details', 'office-btn')" 
+          class="text-blue-600 hover:underline mb-2 w-full">View Details</button>
+  <div id="office-details" class="hidden mt-2 text-sm text-left">
+    <ul class="list-disc list-inside">
+      <li>Dust and wipe all surfaces including desks and shelves</li>
+      <li>Clean and disinfect restrooms</li>
+      <li>Vacuum carpets and mop hard floors</li>
+      <li>Empty trash and recycling bins</li>
+      <li>Clean glass doors and windows inside the office</li>
+      <li>Sanitize high-touch areas such as door handles and light switches</li>
+    </ul>
+  </div>
+</div>
+
+
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="highlights">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@scleaninghouston.com">info@scleaninghouston.com</a></p>
-    <p>Phone: <a href="tel:+17135551234">(713) 555-1234</a></p>
+  <!-- Why Choose Us Section -->
+  <section class="bg-gray-50 py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8">Why Choose S-Cleaning?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-clock text-blue-600 text-3xl mb-2"></i>
+        <h3 class="text-xl font-semibold mb-2">Reliable</h3>
+        <p>We show up on time and deliver consistent results every visit.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-broom text-blue-600 text-3xl mb-2"></i>
+        <h3 class="text-xl font-semibold mb-2">Detailed Cleaning</h3>
+        <p>Every corner is cleaned to perfection using safe products.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-thumbs-up text-blue-600 text-3xl mb-2"></i>
+        <h3 class="text-xl font-semibold mb-2">Trusted</h3>
+        <p>Our clients recommend us for our professionalism and quality service.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-6 text-center">
     <p>&copy; 2025 S-Cleaning Services Houston | All rights reserved.</p>
   </footer>
 
-  <!-- Toggle Details Script -->
+  <!-- JavaScript for toggling service details -->
   <script>
-    function toggleCard(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle('hidden');
+    function toggleCard(cardId, btnId) {
+      const card = document.getElementById(cardId);
+      const btn = document.getElementById(btnId);
+      card.classList.toggle('hidden');
+      btn.innerText = card.classList.contains('hidden') ? "View Details" : "Hide Details";
     }
   </script>
 
