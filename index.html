@@ -36,23 +36,27 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <a href="booking.html" 
-   class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 rounded-lg shadow-lg transition-all hover:scale-105">
-   Book Your Cleaning Now
-</a>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center text-center bg-gray-100">
+  <!-- Background Image -->
+  <img src="https://images.unsplash.com/photo-1601597115039-62aeb5d3d0cd?auto=format&fit=crop&w=1950&q=80"
+       alt="Cleaning"
+       class="absolute inset-0 w-full h-full object-cover opacity-30">
 
-    <!-- Hero Background Image -->
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1601597115039-62aeb5d3d0cd?auto=format&fit=crop&w=1950&q=80" 
-           alt="Cleaning" class="w-full h-full object-cover opacity-30">
-    </div>
-    <div class="relative z-10 max-w-2xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-900">Professional Residential Cleaning in Houston</h2>
-      <p class="mb-6 text-lg md:text-xl text-gray-900">Affordable, reliable, and detailed cleaning services for your home.</p>
-      <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Book a Cleaning</a>
-    </div>
-  </section>
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-blue-600/70 to-blue-400/30"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-2xl px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Professional Residential Cleaning in Houston</h1>
+    <p class="text-lg md:text-xl text-white mb-6 drop-shadow-md">Affordable, reliable, and detailed cleaning services for your home.</p>
+    <a href="booking.html"
+       class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 rounded-lg shadow-lg transition-all hover:scale-105">
+       Book Your Cleaning Now
+    </a>
+  </div>
+</section>
+
 
   <!-- Services Section -->
   <section id="services" class="container mx-auto py-16 px-4">
