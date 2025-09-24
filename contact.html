@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact S Cleaning Services | Houston Cleaning Pros</title>
-    <meta name="description" content="Get in touch for Houston house cleaning quotes or questions. Call, email, or use our form—serving all Houston areas.">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        header { background: #007BFF; color: white; padding: 1rem; text-align: center; }
-        nav { background: #f8f9fa; padding: 0.5rem; text-align: center; }
-        nav a { margin: 0 1rem; text-decoration: none; color: #007BFF; font-weight: bold; }
-        section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
-        h1, h2, h3 { color: #007BFF; }
-        .contact-info { display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0; }
-        .info-block { flex: 1; min-width: 250px; margin: 1rem; text-align: center; }
-        form { max-width: 600px; margin: 0 auto; }
-        input, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 4px; }
-        .cta { background: #28a745; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; margin: 1rem 0; }
-        iframe { width: 100%; height: 300px; border: none; margin: 1rem 0; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; }
-        @media (max-width: 768px) { section { padding: 1rem; } nav a { display: block; margin: 0.5rem 0; } .contact-info { flex-direction: column; } }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | S‑Cleaning Services Houston</title>
+  <meta name="description" content="Get in touch with S‑Cleaning Services Houston — call, email or fill the form." />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>S Cleaning Services</h1>
-        <p>We're Here to Help—Let's Chat!</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="booking.html">Booking</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    
-    <section>
-        <h2>Contact Us</h2>
-        <p>Questions about our Houston cleaning services? Reach out—we respond within 24 hours.</p>
-        
-        <div class="contact-info">
-            <div class="info-block">
-                <h3>Phone</h3>
-                <p>(713) 555-0123</p>
-            </div>
-            <div class="info-block">
-                <h3>Email</h3>
-                <p>info@scleaninghouston.com</p>
-            </div>
-            <div class="info-block">
-                <h3>Hours</h3>
-                <p>Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM</p>
-            </div>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">S‑Cleaning Services</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline hover:text-yellow-400">Home</a>
+        <a href="booking.html" class="hover:underline hover:text-yellow-400">Book Now</a>
+        <a href="about.html" class "hover:underline hover:text-yellow-400">About</a>
+        <a href="contact.html" class="hover:underline hover:text-yellow-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8 text-blue-700">Contact Us</h2>
+    <p class="text-center mb-8 text-gray-600">Questions about our Houston cleaning services? Reach out — we respond within 24 hours.</p>
+
+    <!-- Contact Information -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Phone</h3>
+        <p>(713) 555-0123</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Email</h3>
+        <p>info@scleaninghouston.com</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center">
+        <h3 class="text-xl font-semibold mb-2 text-blue-700">Hours</h3>
+        <p>Mon–Fri: 8AM–6PM<br>Sat: 9AM–4PM</p>
+      </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="mb-12">
+      <iframe
+        class="w-full h-64 rounded-lg shadow"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.123456789!2d-95.3698!3d29.7604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f1b67%3A0x75d9f9b75111e319!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white p-8 rounded-lg shadow">
+      <form action="https://formspree.io/f/your-email" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-gray-700 font-medium mb-2">Your Name <span class="text-red-500">*</span></label>
+          <input id="name" name="name" type="text" required
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
         </div>
-        
-        <h3>Our Service Area</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.123456789!2d-95.3698!3d29.7604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f1b67%3A0x75d9f9b75111e319!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-        
-        <h3>Send Us a Message</h3>
-        <form action="https://formspree.io/f/your-email" method="POST"> <!-- Replace with your form handler -->
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <textarea name="message" placeholder="Tell us how we can help..." rows="5" required></textarea>
-            <button type="submit" class="cta">Send Message</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 S Cleaning Services Houston. All rights reserved. | Serving Greater Houston.</p>
-    </footer>
+        <div>
+          <label for="email" class="block text-gray-700 font-medium mb-2">Your Email <span class="text-red-500">*</span></label>
+          <input id="email" name="email" type="email" required
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+          <input id="phone" name="phone" type="tel"
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label for="message" class="block text-gray-700 font-medium mb-2">Message <span class="text-red-500">*</span></label>
+          <textarea id="message" name="message" rows="4" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="How can we help you today?"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit"
+                  class="bg-blue-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-6 text-center">
+    <p>&copy; 2025 S‑Cleaning Services Houston | All rights reserved.</p>
+  </footer>
+
+  <!-- FontAwesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
 </body>
 </html>
