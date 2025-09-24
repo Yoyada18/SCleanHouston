@@ -7,6 +7,19 @@
   <meta name="description" content="Affordable, reliable residential cleaning services in Houston — S‑Cleaning Services." />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+  <script>
+  function toggleCard(id, btnId) {
+    const content = document.getElementById(id);
+    const btn = document.getElementById(btnId);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      btn.textContent = 'Hide Details';
+    } else {
+      content.classList.add('hidden');
+      btn.textContent = 'View Details';
+    }
+  }
+</script>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Header -->
@@ -43,27 +56,88 @@
     </div>
   </section>
 
-  <!-- Services / Features -->
-  <section id="services" class="container mx-auto py-16 px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Basic Cleaning -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-2">
-        <h3 class="text-xl font-semibold mb-4 text-center">Basic Cleaning</h3>
-        <p class="text-sm">Dusting, vacuum, mopping, surfaces — everyday upkeep for your home.</p>
-      </div>
-      <!-- Deep Cleaning -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-2">
-        <h3 class="text-xl font-semibold mb-4 text-center">Deep Cleaning</h3>
-        <p class="text-sm">All of basic, plus scrubbing baseboards, inside cabinets, behind appliances, etc.</p>
-      </div>
-      <!-- Move‑Out / Office / Custom -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-2">
-        <h3 class="text-xl font-semibold mb-4 text-center">Move‑Out / Office Cleaning</h3>
-        <p class="text-sm">Comprehensive cleaning for offices, moving in/out, or tailored jobs.</p>
+<!-- Services / Features -->
+<section id="services" class="container mx-auto py-16 px-4">
+  <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Our Services</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Basic Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-center text-blue-800">Basic Cleaning</h3>
+      <p class="text-sm text-gray-700 mb-4 text-center">Everyday upkeep: dusting, mopping, beds, kitchen & bath surfaces.</p>
+      <button id="basic-btn" onclick="toggleCard('basic-details', 'basic-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full text-sm">View Details</button>
+      <div id="basic-details" class="hidden mt-2 text-sm text-left">
+        <p class="font-semibold">All Rooms:</p>
+        <ul class="list-disc list-inside">
+          <li>Dust & clean furniture</li>
+          <li>Clean light switches</li>
+          <li>Clean TV screens</li>
+          <li>Pick up & straighten</li>
+          <li>Make beds</li>
+          <li>Change linens (if left on bed)</li>
+          <li>Vacuum carpets</li>
+          <li>Sweep & mop floors</li>
+          <li>Empty wastebaskets</li>
+        </ul>
+        <p class="font-semibold mt-2">Bathrooms:</p>
+        <ul class="list-disc list-inside">
+          <li>Disinfect toilets, tubs, showers</li>
+          <li>Clean sinks, counters, mirrors</li>
+          <li>Polish chrome</li>
+          <li>Sweep & mop floors</li>
+          <li>Change towels (if left for us)</li>
+        </ul>
+        <p class="font-semibold mt-2">Kitchen:</p>
+        <ul class="list-disc list-inside">
+          <li>Sanitize sinks & polish chrome</li>
+          <li>Wipe counters, cabinets (exterior)</li>
+          <li>Clean appliance exteriors</li>
+          <li>Load dishwasher (upon request)</li>
+          <li>Clean inside microwave</li>
+          <li>Sweep & mop floors</li>
+        </ul>
       </div>
     </div>
-  </section>
+
+    <!-- Deep Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-center text-blue-800">Deep Cleaning</h3>
+      <p class="text-sm text-gray-700 mb-4 text-center">Includes Basic Cleaning + deeper scrubbing, polishing & detail work.</p>
+      <button id="deep-btn" onclick="toggleCard('deep-details', 'deep-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full text-sm">View Details</button>
+      <div id="deep-details" class="hidden mt-2 text-sm text-left">
+        <ul class="list-disc list-inside">
+          <li>Everything in Basic Cleaning</li>
+          <li>Scrub baseboards & walls</li>
+          <li>Clean inside cabinets & drawers</li>
+          <li>Clean behind appliances</li>
+          <li>Polish furniture & fixtures</li>
+          <li>Spot-clean windows & doors</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Office Cleaning Card -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transform hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-center text-blue-800">Office Cleaning</h3>
+      <p class="text-sm text-gray-700 mb-4 text-center">Reliable, professional service for workspaces and commercial areas.</p>
+      <button id="office-btn" onclick="toggleCard('office-details', 'office-btn')" 
+              class="text-blue-600 hover:underline mb-2 w-full text-sm">View Details</button>
+      <div id="office-details" class="hidden mt-2 text-sm text-left">
+        <ul class="list-disc list-inside">
+          <li>Dust & wipe desks, shelves, surfaces</li>
+          <li>Disinfect restrooms</li>
+          <li>Vacuum carpets & mop hard floors</li>
+          <li>Empty trash & recycling bins</li>
+          <li>Clean interior glass & windows</li>
+          <li>Sanitize high-touch areas (handles, switches)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html> 
