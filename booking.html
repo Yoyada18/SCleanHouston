@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Cleaning Services in Houston | S Cleaning Services</title>
-    <meta name="description" content="Easy online booking for residential cleaning in Houston. Choose from weekly, deep clean, or move-out services starting at $99. Schedule now!">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        header { background: #007BFF; color: white; padding: 1rem; text-align: center; }
-        nav { background: #f8f9fa; padding: 0.5rem; text-align: center; }
-        nav a { margin: 0 1rem; text-decoration: none; color: #007BFF; font-weight: bold; }
-        section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
-        h1, h2, h3 { color: #007BFF; }
-        form { max-width: 600px; margin: 0 auto; }
-        input, select, textarea { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 4px; }
-        .cta { background: #28a745; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; margin: 1rem 0; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #ddd; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; }
-        @media (max-width: 768px) { section { padding: 1rem; } nav a { display: block; margin: 0.5rem 0; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Cleaning | S-Cleaning Houston</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>S Cleaning Services</h1>
-        <p>Book Your Spotless Home Today</p>
-    </header>
-    
+
+  <!-- Header -->
+  <header>
+    <h1>S-Cleaning Services</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="booking.html">Booking</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    
-    <section>
-        <h2>Book Your Cleaning Today</h2>
-        <p>Reliable, professional residential cleaning in Houston—tailored to your busy life.</p>
-        
-        <h3>Pricing Options</h3>
-        <table>
-            <tr><th>Service</th><th>Starting Price</th><th>Details</th></tr>
-            <tr><td>Weekly Clean</td><td>$99</td><td>2-3 hours, recurring discount.</td></tr>
-            <tr><td>Deep Clean</td><td>$149</td><td>Full home scrub, ideal for spring.</td></tr>
-            <tr><td>Move-Out</td><td>$199</td><td>Thorough end-of-lease prep.</td></tr>
-        </table>
-        
-        <h3>Quick Booking Form</h3>
-        <form action="https://formspree.io/f/manpylny" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <select name="service" required>
-                <option value="">Select Service</option>
-                <option value="weekly">Weekly Clean</option>
-                <option value="deep">Deep Clean</option>
-                <option value="moveout">Move-Out Clean</option>
-            </select>
-            <input type="date" name="date" required>
-            <textarea name="address" placeholder="Your Address in Houston" rows="3" required></textarea>
-            <textarea name="notes" placeholder="Special Requests (e.g., pet-friendly products)"></textarea>
-            <button type="submit" class="cta">Submit Booking Request</button>
-        </form>
-        <p style="text-align: center; font-size: 0.9em;">We'll call to confirm within 24 hours. 10% off first booking!</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 S Cleaning Services Houston. All rights reserved.</p>
-    </footer>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Book Your Cleaning Today</h1>
+    <p>Reliable, professional residential and office cleaning in Houston—tailored to your busy life.</p>
+    <a href="#booking-form" class="cta-button">Book Now</a>
+  </section>
+
+  <!-- Pricing & Services -->
+  <section class="highlights">
+    <h2>Pricing Options</h2>
+    <table style="width:100%; border-collapse: collapse; margin-top:20px;">
+      <tr style="background:#0077cc; color:white;">
+        <th style="padding:10px; text-align:left;">Service</th>
+        <th style="padding:10px; text-align:left;">Starting Price</th>
+        <th style="padding:10px; text-align:left;">Details</th>
+      </tr>
+      <tr>
+        <td style="padding:10px;">Weekly Clean</td>
+        <td style="padding:10px;">$99</td>
+        <td style="padding:10px;">2-3 hours, recurring discount.</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;">Deep Clean</td>
+        <td style="padding:10px;">$149</td>
+        <td style="padding:10px;">Full home scrub, ideal for seasonal refresh.</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;">Office Clean</td>
+        <td style="padding:10px;">$199</td>
+        <td style="padding:10px;">Professional office space cleaning.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking-form" class="contact-container">
+    <h2>Quick Booking Form</h2>
+    <form class="booking-form" action="https://formspree.io/f/manpylny" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="weekly">Weekly Clean</option>
+        <option value="deep">Deep Clean</option>
+        <option value="office">Office Clean</option>
+      </select>
+      <input type="date" name="date" required>
+      <textarea name="address" placeholder="Your Address in Houston" rows="3" required></textarea>
+      <textarea name="notes" placeholder="Special Requests (e.g., pet-friendly products)"></textarea>
+      <button type="submit" class="cta-button">Submit Booking Request</button>
+    </form>
+    <p style="text-align:center; margin-top:15px; font-size:0.9em;">We'll call to confirm within 24 hours. 10% off your first booking!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="highlights">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@scleaninghouston.com">info@scleaninghouston.com</a></p>
+    <p>Phone: <a href="tel:+17135551234">(713) 555-1234</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 S-Cleaning Services Houston | All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
 
