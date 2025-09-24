@@ -13,7 +13,8 @@
   </header>
 
   <main class="max-w-xl mx-auto p-6 bg-white mt-8 rounded shadow">
-    <form action="#" method="POST" class="space-y-4">
+    <form action="https://formspree.io/f/manpylny" method="POST" class="space-y-4">
+      
       <label class="block">
         <span class="text-gray-700">Full Name</span>
         <input type="text" name="name" required class="mt-1 block w-full border rounded px-3 py-2">
@@ -43,9 +44,11 @@
         <input type="date" name="date" required class="mt-1 block w-full border rounded px-3 py-2">
       </label>
 
-      <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 rounded-lg shadow-lg transition">
+      <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 rounded-lg shadow-lg transition-all hover:scale-105">
         Submit Booking
       </button>
+
+      <p class="text-sm text-gray-500 mt-2">You will receive a confirmation email shortly.</p>
     </form>
   </main>
 
