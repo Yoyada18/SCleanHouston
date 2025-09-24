@@ -7,17 +7,21 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body { font-family: Arial, sans-serif; margin:0; color:#333; line-height:1.6; }
-    header { background:#0d6efd; color:white; padding:50px 20px; text-align:center; }
-    header h1 { font-size:2.5em; margin-bottom:10px; }
+    a { text-decoration:none; }
+    header { background:#0d6efd; color:white; padding:80px 20px; text-align:center; }
+    header h1 { font-size:3em; margin-bottom:10px; }
     header p { font-size:1.2em; margin-bottom:20px; }
-    .btn { background:#ffc107; color:#333; padding:15px 30px; border-radius:5px; font-weight:bold; text-decoration:none; transition:0.3s; }
+
+    /* CTA Button */
+    .btn { background:#ffc107; color:#333; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s; display:inline-block; }
     .btn:hover { background:#e0a800; }
 
-    section { padding:50px 20px; max-width:800px; margin:0 auto; }
+    /* Section Styling */
+    section { padding:60px 20px; max-width:1000px; margin:0 auto; }
 
-    h2 { text-align:center; color:#0d6efd; margin-bottom:20px; }
+    h2 { text-align:center; color:#0d6efd; margin-bottom:30px; }
 
-    /* Booking Form Styling */
+    /* Form & Container */
     .contact-container { background:#f8f9fa; padding:40px 30px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
     .booking-form { display:flex; flex-direction:column; gap:20px; }
     .booking-form input,
@@ -28,6 +32,11 @@
     .booking-form textarea:focus { outline:none; border-color:#0d6efd; box-shadow:0 0 8px rgba(13,110,253,0.3); }
     .booking-form button { padding:15px; border:none; border-radius:8px; background:#0d6efd; color:white; font-weight:bold; font-size:1.1em; cursor:pointer; transition:0.3s; }
     .booking-form button:hover { background:#0b5ed7; transform:translateY(-2px); }
+
+    /* Benefits Section */
+    .benefits { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-bottom:40px; }
+    .benefit { flex:1 1 250px; background:white; padding:20px; border-radius:10px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+    .benefit img { width:50px; margin-bottom:15px; }
 
     /* Thank You Popup */
     #thankYouPopup {
@@ -45,18 +54,44 @@
     }
     #thankYouPopup button { margin-top:20px; background:#0d6efd; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; }
 
-    @media(max-width:768px){ .contact-container { padding:30px 20px; } }
+    @media(max-width:768px){ .contact-container, .benefit { width:100%; } }
   </style>
 </head>
 <body>
 
+  <!-- Hero Section -->
   <header>
-    <h1>S-Cleaning Houston</h1>
-    <p>Book your professional cleaning today!</p>
+    <h1>Book Your Cleaning Today</h1>
+    <p>Reliable, professional, and friendly residential cleaning in Houston</p>
+    <a href="#booking" class="btn">Book Now</a>
   </header>
 
+  <!-- Benefits Section -->
+  <section>
+    <h2>Why Choose Us</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/user-male-circle.png" alt="Professional Staff">
+        <h3>Professional Staff</h3>
+        <p>Our trained team ensures top-quality cleaning every time.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/clock.png" alt="Flexible Scheduling">
+        <h3>Flexible Scheduling</h3>
+        <p>Book cleaning at a time that fits your schedule perfectly.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/ios-filled/50/0d6efd/checked.png" alt="Satisfaction Guarantee">
+        <h3>Satisfaction Guaranteed</h3>
+        <p>We’re not happy until you are — 100% satisfaction guaranteed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
   <section id="booking">
     <h2>Book Your Cleaning</h2>
+    <p style="text-align:center; margin-bottom:20px;">Fill out the form below and we’ll contact you quickly!</p>
     <div class="contact-container">
       <form id="bookingForm" action="https://formspree.io/f/manpylny" method="POST" class="booking-form">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -86,7 +121,7 @@
     const popup = document.getElementById('thankYouPopup');
 
     form.addEventListener('submit', function(e){
-      e.preventDefault(); // prevent default submission
+      e.preventDefault();
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
@@ -108,3 +143,4 @@
 
 </body>
 </html>
+
