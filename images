@@ -1,5 +1,0 @@
-
-mkdir images
-git mv hero-clean.jpg images/hero-clean.jpg
-git commit -m "Move hero image to images folder"
-git push
