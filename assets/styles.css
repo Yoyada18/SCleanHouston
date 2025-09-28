@@ -1,1 +1,15 @@
+/* small tweaks to complement Tailwind */
+:root { --brand: #0b63b8; }
+
+/* make images flattering on retina */
+img { image-rendering: optimizeQuality; }
+
+/* simple focus outline for keyboard users */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 3px solid rgba(11,99,184,0.18);
+  outline-offset: 2px;
+}
+
+/* small rounded for logo on header */
+header img { border-radius: 6px; }
 
