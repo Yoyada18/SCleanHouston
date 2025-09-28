@@ -1,185 +1,131 @@
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Your Cleaning | S‑Cleaning Houston</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Your Cleaning | S-Cleaning Houston</title>
   <meta name="description" content="Book reliable residential cleaning services in Houston today." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- Header -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <!-- Logo + Brand -->
-    <a href="index.html" class="flex items-center space-x-3">
-      <img src="images/logo1.jpg" alt="S-Cleaning Houston Logo" class="h-14 w-auto object-contain">
-      <div>
-        <h1 class="text-2xl font-extrabold text-gray-900">S-Cleaning Houston</h1>
-        <p class="text-sm text-gray-500 -mt-1">S-Tier Service, Spotless Results</p>
-      </div>
-    </a>
-
-    <!-- Navigation -->
-    <nav class="hidden md:flex space-x-8 text-lg font-medium">
-      <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-      <a href="services.html" class="text-gray-700 hover:text-blue-600 transition">Services</a>
-      <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About</a>
-      <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
-    </nav>
-
-    <!-- Mobile Menu Button -->
-    <button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none" id="menu-toggle">
-      ☰
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
-    <nav class="flex flex-col space-y-4 px-6 py-4 text-lg font-medium">
-      <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-      <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
-      <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
-      <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<script>
-  // Mobile menu toggle
-  document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.getElementById("mobile-menu").classList.toggle("hidden");
-  });
-</script>
-
-
-  <!-- Hero / Intro -->
-  <section class="bg-blue-100 text-center py-16 px-4">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-700">Book Your Cleaning Today</h2>
-      <p class="text-lg md:text-xl text-gray-700 mb-6">
-        Reliable, professional, and friendly residential cleaning in Houston.
-      </p>
-      <a href="#booking" class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-lg shadow hover:bg-yellow-500 transition">
-        Book Now
+  <!-- header (same pattern) -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="/logo1.jpg" alt="S-Cleaning Houston logo" class="h-14 w-auto object-contain rounded-md">
+        <div>
+          <h1 class="text-2xl font-extrabold text-gray-900">S-Cleaning Houston</h1>
+        </div>
       </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="mobile-toggle-3" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
     </div>
-  </section>
-
-  <!-- Benefits -->
-  <section class="py-16 px-4">
-    <h2 class="text-3xl text-center font-bold mb-12 text-blue-700">Why Choose Us</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <img src="https://img.icons8.com/ios-filled/50/0d6efd/user-male-circle.png" alt="" class="mx-auto mb-4" aria-hidden="true" />
-        <h3 class="text-xl font-semibold mb-2">Professional Staff</h3>
-        <p>Our trained team ensures top-quality cleaning every time.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <img src="https://img.icons8.com/ios-filled/50/0d6efd/clock.png" alt="" class="mx-auto mb-4" aria-hidden="true" />
-        <h3 class="text-xl font-semibold mb-2">Flexible Scheduling</h3>
-        <p>Book cleaning at a time that fits your schedule perfectly.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow text-center">
-        <img src="https://img.icons8.com/ios-filled/50/0d6efd/checked.png" alt="" class="mx-auto mb-4" aria-hidden="true" />
-        <h3 class="text-xl font-semibold mb-2">Satisfaction Guaranteed</h3>
-        <p>We’re not happy until you are — 100% satisfaction guarantee.</p>
-      </div>
+    <div id="mobile-menu-3" class="md:hidden hidden border-t border-gray-100">
+      <nav class="flex flex-col gap-3 px-6 py-4">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Booking Form -->
-  <main id="booking" class="py-16 px-4">
-    <h2 class="text-3xl text-center font-bold mb-8 text-blue-700">Book Your Cleaning</h2>
-    <p class="text-center mb-8 max-w-2xl mx-auto text-gray-600">Fill out the form below and we’ll contact you shortly.</p>
-    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow">
-      <form id="bookingForm" action="https://formspree.io/f/manpylny" method="POST" class="space-y-6">
+  <main class="py-12 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">Book Your Cleaning</h2>
+    <p class="text-center text-gray-600 mb-6">Fill out this form — we’ll get back within 24 hours.</p>
+
+    <div class="bg-white p-8 rounded-lg shadow">
+      <form id="bookingForm" action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4" novalidate>
         <div>
-          <label for="name" class="block text-gray-700 font-medium mb-2">Your Name <span class="text-red-500">*</span></label>
-          <input type="text" id="name" name="name" required
-                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <label class="block text-sm font-medium text-gray-700" for="name">Name<span class="text-red-500">*</span></label>
+          <input id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2" />
         </div>
+
         <div>
-          <label for="email" class="block text-gray-700 font-medium mb-2">Your Email <span class="text-red-500">*</span></label>
-          <input type="email" id="email" name="email" required
-                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <label class="block text-sm font-medium text-gray-700" for="email">Email<span class="text-red-500">*</span></label>
+          <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2" />
         </div>
+
         <div>
-          <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-          <input type="tel" id="phone" name="phone"
-                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <label class="block text-sm font-medium text-gray-700" for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2" />
         </div>
+
         <div>
-          <label for="service" class="block text-gray-700 font-medium mb-2">Select Service <span class="text-red-500">*</span></label>
-          <select id="service" name="service" required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-            <option value="">-- Select Service --</option>
-            <option value="Basic Cleaning">Basic Cleaning</option>
-            <option value="Deep Cleaning">Deep Cleaning</option>
-            <option value="Office Cleaning">Office Cleaning</option>
+          <label class="block text-sm font-medium text-gray-700" for="service">Service<span class="text-red-500">*</span></label>
+          <select id="service" name="service" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2">
+            <option value="">Select a service</option>
+            <option>Basic Cleaning</option>
+            <option>Deep Cleaning</option>
+            <option>Office Cleaning</option>
           </select>
         </div>
+
         <div>
-          <label for="message" class="block text-gray-700 font-medium mb-2">Additional Details</label>
-          <textarea id="message" name="message" rows="4"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    placeholder="Let us know any specific requests or concerns..."></textarea>
+          <label class="block text-sm font-medium text-gray-700" for="date">Preferred Date</label>
+          <input id="date" name="date" type="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2" />
         </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="message">Notes</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm px-3 py-2" placeholder="Any special instructions?"></textarea>
+        </div>
+
         <div class="text-center">
-          <button type="submit"
-                  class="bg-blue-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
-            Book Now
-          </button>
+          <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded-md font-semibold">Send Booking</button>
         </div>
       </form>
+
+      <div id="formStatus" class="hidden mt-4 p-3 rounded-md text-sm"></div>
     </div>
   </main>
 
-  <!-- Thank You Popup -->
-  <div id="thankYouPopup"
-       class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm mx-auto">
-      <h3 class="text-xl font-semibold mb-4">Thank You!</h3>
-      <p>Your booking request has been sent. We will contact you shortly.</p>
-      <button onclick="closePopup()"
-              class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-        Close
-      </button>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-6 text-center">
-    <p>&copy; 2025 S‑Cleaning Services Houston | All rights reserved.</p>
+    <p>© <span id="year3"></span> S-Cleaning Services Houston</p>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    const form = document.getElementById('bookingForm');
-    const popup = document.getElementById('thankYouPopup');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          popup.classList.remove('hidden');
-          form.reset();
-        } else {
-          alert('Oops! There was a problem submitting your form.');
-        }
-      }).catch(error => alert('Oops! There was a problem submitting your form.'));
+    document.getElementById('year3').textContent = new Date().getFullYear();
+    // mobile menu
+    document.getElementById('mobile-toggle-3').addEventListener('click', () => {
+      document.getElementById('mobile-menu-3').classList.toggle('hidden');
     });
 
-    function closePopup() {
-      popup.classList.add('hidden');
-    }
+    // Form handler (uses Formspree)
+    const form = document.getElementById('bookingForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'mt-4 p-3 rounded-md text-sm bg-blue-50 text-blue-700';
+      status.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.className = 'mt-4 p-3 rounded-md text-sm bg-green-50 text-green-700';
+          status.textContent = 'Thanks — your request was sent. We will contact you shortly.';
+          form.reset();
+        } else {
+          const data = await res.json();
+          status.className = 'mt-4 p-3 rounded-md text-sm bg-red-50 text-red-700';
+          status.textContent = data?.error || 'Oops — there was a problem sending the form.';
+        }
+      } catch (err) {
+        status.className = 'mt-4 p-3 rounded-md text-sm bg-red-50 text-red-700';
+        status.textContent = 'Network error. Please try again later or call (713) 555-0123.';
+      }
+    });
   </script>
 
 </body>
