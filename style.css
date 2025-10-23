@@ -84,6 +84,71 @@ header nav a:hover {
   margin-bottom: 30px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* fallback background image for phones or when video doesn't load */
+.hero::before {
+  content: "";
+  background: url("images/hero-clean.jpg") center center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  /* hide the video on phones to save data */
+  .hero video {
+    display: none;
+  }
+
+  .hero::before {
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
 
 /* CTA Button */
 .cta-button {
