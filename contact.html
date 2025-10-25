@@ -4,14 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | S-Cleaning Houston</title>
-  <meta name="description" content="Get in touch with S-Cleaning Houston — call, email, or send us a message online." />
+  <meta name="description" content="Get in touch with S-Cleaning Houston — request a quote or book your cleaning today!" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .animate-fadeIn { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
-
   <!-- Header -->
-    <header class="bg-white shadow sticky top-0 z-50">
+  <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="/logo1.jpg" alt="S-Cleaning Houston logo" class="h-14 w-auto object-contain rounded-md">
@@ -20,71 +22,85 @@
           <p class="text-xs text-gray-500 -mt-1">S-Tier Service • Spotless Results</p>
         </div>
       </a>
-
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
-        <a class="hover:text-blue-600" href="index.html">Home</a>
-        <a class="hover:text-blue-600" href="services.html">Services</a>
-        <a class="hover:text-blue-600" href="about.html">About</a>
-        <a class="hover:text-blue-600" href="booking.html">Book</a>
-        <a class="hover:text-blue-600" href="contact.html">Contact</a>
-        <a class="bg-yellow-400 text-blue-900 px-3 py-2 rounded-md font-semibold hover:scale-105 transition" href="tel:+18326566029">Call (832) 656-6029</a>
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="booking.html" class="hover:text-blue-600">Book</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        <a href="tel:+18326566029" class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition">Call (832) 656-6029</a>
       </nav>
-
-      <button id="mobile-toggle" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
+      <button id="mobile-toggle" class="md:hidden text-2xl">☰</button>
     </div>
-
-    <!-- mobile menu -->
-    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100">
       <nav class="flex flex-col gap-3 px-6 py-4">
-        <a class="py-2" href="index.html">Home</a>
-        <a class="py-2" href="services.html">Services</a>
-        <a class="py-2" href="about.html">About</a>
-        <a class="py-2" href="booking.html">Book</a>
-        <a class="py-2" href="contact.html">Contact</a>
-        <a class="py-2 font-semibold text-blue-700" href="tel:+18326566029">Call (832) 656-6029</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
-  <!-- (copy header block from index.html) -->
 
-  <main class="max-w-5xl mx-auto px-6 py-16">
-    <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">Contact Us</h1>
+  <!-- Contact Section -->
+  <main class="max-w-5xl mx-auto px-6 py-16 animate-fadeIn">
+    <h2 class="text-4xl font-bold text-blue-700 mb-8 text-center">Contact Us</h2>
+    <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">We’d love to hear from you! Whether you have a question, need a quote, or want to schedule your next cleaning — our team is here to help.</p>
+
     <div class="grid md:grid-cols-2 gap-10">
       <div>
-        <h2 class="text-xl font-semibold mb-4">Reach Out</h2>
-        <p class="text-gray-600 mb-2"><strong>Phone:</strong> (832) 656-6029</p>
-        <p class="text-gray-600 mb-6"><strong>Email:</strong> info@scleaninghouston.com</p>
-        <p class="text-gray-600">Hours:</p>
+        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Get In Touch</h3>
+        <p class="text-gray-700 mb-2"><strong>Phone:</strong> (832) 656-6029</p>
+        <p class="text-gray-700 mb-4"><strong>Email:</strong> info@scleaninghouston.com</p>
+        <p class="text-gray-700 mb-3"><strong>Hours:</strong></p>
         <ul class="text-gray-600 mb-6 text-sm">
-          <li>Mon–Fri: 8am–6pm</li>
-          <li>Sat: 9am–4pm</li>
+          <li>Mon–Fri: 8:00 AM – 6:00 PM</li>
+          <li>Saturday: 9:00 AM – 4:00 PM</li>
+          <li>Sunday: Closed</li>
         </ul>
+        <iframe class="w-full h-64 rounded-lg shadow" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.091535406357!2d-95.3698!3d29.7604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf2d57e9d06b%3A0xaea6a34f660b0c8b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1698268462854!5m2!1sen!2sus"></iframe>
       </div>
+
       <div>
-        <h2 class="text-xl font-semibold mb-4">Send a Message</h2>
-        <form class="space-y-4" action="#" method="POST">
+        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Send a Message</h3>
+        <form action="https://formspree.io/f/manpylny" method="POST" class="space-y-4">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="name" class="mt-1 w-full border-gray-300 rounded-md shadow-sm" required>
+            <input type="text" id="name" name="name" required class="mt-1 w-full border-gray-300 rounded-md shadow-sm px-3 py-2">
           </div>
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" class="mt-1 w-full border-gray-300 rounded-md shadow-sm" required>
+            <input type="email" id="email" name="email" required class="mt-1 w-full border-gray-300 rounded-md shadow-sm px-3 py-2">
           </div>
           <div>
             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" name="message" rows="4" class="mt-1 w-full border-gray-300 rounded-md shadow-sm" required></textarea>
+            <textarea id="message" name="message" rows="4" required class="mt-1 w-full border-gray-300 rounded-md shadow-sm px-3 py-2"></textarea>
           </div>
-          <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg font-semibold">
-            Send Message
-          </button>
+          <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-md font-semibold transition w-full">Send Message</button>
         </form>
       </div>
     </div>
   </main>
 
+  <!-- CTA -->
+  <section class="bg-yellow-400 py-10 text-center text-blue-900 font-semibold">
+    <p class="text-lg">Prefer to book online? <a href="booking.html" class="underline">Schedule your cleaning now</a>.</p>
+  </section>
+
   <!-- Footer -->
-  <!-- (copy same footer block) -->
+  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8 text-center">
+    <p>© <span id="year"></span> S-Cleaning Services Houston</p>
+    <p class="text-sm mt-1">Houston, TX • Eco-Friendly & Reliable Cleaning</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
 
