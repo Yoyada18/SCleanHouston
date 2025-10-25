@@ -4,40 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Houston Residential & Office Cleaning | S-Cleaning Houston</title>
-  <meta name="description" content="Top-rated residential and office cleaning services in Houston. Affordable deep cleaning, move-out and commercial janitorial services. Book online today!" />
+  <meta name="description" content="Professional residential and office cleaning services in Houston. Eco-friendly, reliable, and trusted by hundreds of homeowners." />
   <link rel="canonical" href="https://scleaninghouston.com/">
-  <!-- Social preview (update image at /images/social-preview.jpg) -->
   <meta property="og:title" content="Houston’s Trusted Cleaning Services | S-Cleaning Houston">
   <meta property="og:description" content="Affordable, reliable cleaning services for homes and offices in Houston. Book online or call today!">
   <meta property="og:image" content="https://scleaninghouston.com/images/social-preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Tailwind CDN (fast for prototyping). For production compile Tailwind to remove unused CSS. -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"S-Cleaning Services Houston",
-    "image":"https://scleaninghouston.com/logo1.jpg",
-    "@id":"https://scleaninghouston.com",
-    "url":"https://scleaninghouston.com",
-    "telephone":"+1-832-656-6029",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Houston",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "priceRange":"$$",
-    "description":"Professional residential and office cleaning services in Houston."
-  }
-  </script>
+  <style>
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 1;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- header (shared across pages) -->
+  <!-- Header -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
@@ -47,147 +41,109 @@
           <p class="text-xs text-gray-500 -mt-1">S-Tier Service • Spotless Results</p>
         </div>
       </a>
-
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
         <a class="hover:text-blue-600" href="index.html">Home</a>
         <a class="hover:text-blue-600" href="services.html">Services</a>
         <a class="hover:text-blue-600" href="about.html">About</a>
         <a class="hover:text-blue-600" href="booking.html">Book</a>
         <a class="hover:text-blue-600" href="contact.html">Contact</a>
-        <a class="bg-yellow-400 text-blue-900 px-3 py-2 rounded-md font-semibold hover:scale-105 transition" href="tel:+18326566029">Call (832) 656-6029</a>
+        <a class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition" href="tel:+18326566029">Call (832) 656-6029</a>
       </nav>
-
       <button id="mobile-toggle" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
     </div>
 
-    <!-- mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
       <nav class="flex flex-col gap-3 px-6 py-4">
-        <a class="py-2" href="index.html">Home</a>
-        <a class="py-2" href="services.html">Services</a>
-        <a class="py-2" href="about.html">About</a>
-        <a class="py-2" href="booking.html">Book</a>
-        <a class="py-2" href="contact.html">Contact</a>
-        <a class="py-2 font-semibold text-blue-700" href="tel:+18326566029">Call (832) 656-6029</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
+        <a class="font-semibold text-blue-700" href="tel:+18326566029">Call (832) 656-6029</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <main>
-    <section class="bg-gradient-to-b from-blue-50 to-white py-16">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">Houston’s Trusted Home & Office Cleaning</h2>
-          <p class="text-lg text-gray-700 mb-6">Reliable, professional, and friendly cleaning tailored to your schedule. Move-outs, deep cleans, regular upkeep and commercial janitorial work.</p>
-          <div class="flex gap-4 flex-wrap">
-            <a class="inline-flex items-center gap-2 bg-blue-700 text-white px-5 py-3 rounded-md shadow hover:scale-105 transition" href="booking.html">Book Now</a>
-            <a class="inline-flex items-center gap-2 border border-blue-700 text-blue-700 px-5 py-3 rounded-md hover:bg-blue-50 transition" href="contact.html">Get a Quote</a>
-          </div>
-          <ul class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <li class="bg-white p-4 rounded-lg shadow text-center">
-              <div class="font-semibold text-blue-700">Experienced Team</div>
-              <div class="text-sm text-gray-600">Background checked & trained</div>
-            </li>
-            <li class="bg-white p-4 rounded-lg shadow text-center">
-              <div class="font-semibold text-blue-700">Eco-Friendly</div>
-              <div class="text-sm text-gray-600">Safe products, healthy homes</div>
-            </li>
-            <li class="bg-white p-4 rounded-lg shadow text-center">
-              <div class="font-semibold text-blue-700">Satisfaction</div>
-              <div class="text-sm text-gray-600">We’ll make it right</div>
-            </li>
-          </ul>
+  <!-- Hero Section -->
+  <section class="relative hero overflow-hidden text-center flex flex-col justify-center items-center h-[85vh] md:h-[90vh]">
+    <video autoplay muted loop playsinline poster="images/hero-clean.jpg" id="heroVideo" class="absolute w-full h-full object-cover">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10 max-w-2xl mx-auto px-4 animate-fadeIn">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Houston’s Trusted Home & Office Cleaning</h2>
+      <p class="text-lg md:text-xl text-gray-100 mb-6">Reliable, professional, and friendly cleaning — from deep cleans to commercial care.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="booking.html" class="bg-yellow-500 text-blue-900 px-6 py-3 rounded-md font-semibold hover:scale-105 transition">Book Now</a>
+        <a href="contact.html" class="border border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-700 transition">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-blue-700 mb-8">Our Services</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="font-semibold text-lg mb-2">Basic Cleaning</h4>
+          <p class="text-sm text-gray-600 mb-3">Routine upkeep: dusting, vacuuming, kitchens & bathrooms.</p>
+          <a href="booking.html?service=Basic%20Cleaning" class="text-blue-700 underline">Book Basic</a>
         </div>
-
-        <div class="order-first md:order-last">
-          <!-- try to replace with a compressed image -->
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Full-width Hero Image Slider -->
-<section class="hero">
-  <video autoplay muted loop playsinline poster="images/hero-clean.jpg" id="heroVideo">
-    <source src="videos/hero.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-
-  <div class="hero-text">
-    <h1>Professional Cleaning Services</h1>
-    <p>Reliable, affordable, and always spotless.</p>
-
-    <!-- CTA Button -->
-    <a href="#before-after" class="cta-btn">See Our Work</a>
-  </div>
-</section>
-
-</section>
-
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: { delay: 5000 },
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-  });
-</script>
-
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="font-semibold text-lg mb-2">Deep Cleaning</h4>
+          <p class="text-sm text-gray-600 mb-3">Detailed scrubbing — baseboards, corners, and appliances.</p>
+          <a href="booking.html?service=Deep%20Cleaning" class="text-blue-700 underline">Book Deep</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="font-semibold text-lg mb-2">Commercial Cleaning</h4>
+          <p class="text-sm text-gray-600 mb-3">Office janitorial and business cleaning for professional spaces.</p>
+          <a href="contact.html" class="text-blue-700 underline">Request Quote</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="py-16">
-      <div class="max-w-6xl mx-auto px-6">
-        <h3 class="text-3xl font-bold text-center text-blue-700 mb-8">Our Services</h3>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
-            <h4 class="font-semibold text-lg mb-2">Basic Cleaning</h4>
-            <p class="text-sm text-gray-600 mb-3">Regular upkeep: dusting, vacuuming, bathrooms & kitchen surfaces.</p>
-            <a href="booking.html?service=Basic%20Cleaning" class="text-blue-700 underline">Book Basic</a>
-          </article>
-
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
-            <h4 class="font-semibold text-lg mb-2">Deep Cleaning</h4>
-            <p class="text-sm text-gray-600 mb-3">Detailed scrubbing, baseboards, inside cabinets and more.</p>
-            <a href="booking.html?service=Deep%20Cleaning" class="text-blue-700 underline">Book Deep</a>
-          </article>
-
-          <article class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
-            <h4 class="font-semibold text-lg mb-2">Office & Commercial</h4>
-            <p class="text-sm text-gray-600 mb-3">Scheduled janitorial and one-time commercial cleans.</p>
-            <a href="contact.html" class="text-blue-700 underline">Request Quote</a>
-          </article>
-        </div>
+  <!-- Testimonials Section -->
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-8">What Clients Say</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“They left my apartment spotless! Super friendly and fast.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Maria R.</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“Professional and reliable — they’ve been cleaning our office weekly.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Jason T.</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“Affordable and detailed! I’ll definitely book again.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Brianna L.</span>
+        </blockquote>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="bg-blue-700 text-white py-12">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h4 class="text-2xl font-semibold">Ready for a spotless home?</h4>
-        <p class="mt-2 text-sm">Book in 60 seconds — trusted local cleaners near you.</p>
-        <a href="booking.html" class="mt-6 inline-block bg-yellow-400 text-blue-900 px-6 py-3 rounded-md font-semibold hover:scale-105 transition">Book Now</a>
-      </div>
-    </section>
-  </main>
+  <!-- Call to Action Footer -->
+  <section class="bg-yellow-400 py-10 text-center text-blue-900 font-semibold">
+    <p class="text-lg">Ready to come home to clean? <a href="booking.html" class="underline">Book your cleaning today</a>.</p>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="mb-3">© <span id="year"></span> S-Cleaning Services Houston</div>
-      <div class="text-sm">Houston, TX • <a href="contact.html" class="underline">Contact</a> • <a class="underline" href="privacy.html">Privacy</a></div>
-    </div>
+  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8 text-center">
+    <p>© <span id="year"></span> S-Cleaning Services Houston</p>
+    <p class="text-sm mt-1">Licensed & Insured • Eco-Friendly Products • Houston, TX</p>
   </footer>
 
-  <script src="scripts/site.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
+
 
 
 
