@@ -1,33 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Houston Residential & Office Cleaning | S-Cleaning Houston</title>
-  <meta name="description" content="Professional residential and office cleaning services in Houston. Eco-friendly, reliable, and trusted by hundreds of homeowners." />
-  <link rel="canonical" href="https://scleaninghouston.com/">
-  <meta property="og:title" content="Houston’s Trusted Cleaning Services | S-Cleaning Houston">
-  <meta property="og:description" content="Affordable, reliable cleaning services for homes and offices in Houston. Book online or call today!">
   <meta property="og:image" content="https://scleaninghouston.com/images/social-preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="assets/site.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .hero::after {
       content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-      z-index: 1;
-    }
-    .animate-fadeIn {
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+@@ -31,121 +31,88 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -49,10 +27,10 @@
         <a class="hover:text-blue-600" href="contact.html">Contact</a>
         <a class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition" href="tel:+18326566029">Call (832) 656-6029</a>
       </nav>
-      <button id="mobile-toggle" class="md:hidden text-2xl" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+      <button id="mobile-toggle" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
     </div>
 
-    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100" aria-hidden="true">
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
       <nav class="flex flex-col gap-3 px-6 py-4">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -63,7 +41,6 @@
       </nav>
     </div>
   </header>
-<body class="bg-gray-50 text-gray-800 antialiased">
 
   <!-- Hero Section -->
   <section class="relative hero overflow-hidden text-center flex flex-col justify-center items-center h-[85vh] md:h-[90vh]">
@@ -136,26 +113,14 @@
     <p class="text-sm mt-1">Licensed & Insured • Eco-Friendly Products • Houston, TX</p>
   </footer>
 
-  <script src="scripts/chat.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileToggle && mobileMenu) {
-      mobileToggle.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        const expanded = !isHidden;
-        mobileToggle.setAttribute('aria-expanded', expanded.toString());
-        mobileToggle.setAttribute('aria-label', expanded ? 'Close navigation menu' : 'Open navigation menu');
-        mobileMenu.setAttribute('aria-hidden', (!expanded).toString());
-      });
-    }
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
-
-
 
 
  
