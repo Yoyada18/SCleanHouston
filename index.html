@@ -6,12 +6,10 @@
   <title>Houston Residential & Office Cleaning | S-Cleaning Houston</title>
   <meta name="description" content="Professional residential and office cleaning services in Houston. Eco-friendly, reliable, and trusted by hundreds of homeowners." />
   <link rel="canonical" href="https://scleaninghouston.com/">
-
   <meta property="og:title" content="Houston’s Trusted Cleaning Services | S-Cleaning Houston">
   <meta property="og:description" content="Affordable, reliable cleaning services for homes and offices in Houston. Book online or call today!">
   <meta property="og:image" content="https://scleaninghouston.com/images/social-preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -30,10 +28,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-
-
-
-
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -41,11 +35,12 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-@@ -47,149 +41,111 @@
+        <img src="/logo1.jpg" alt="S-Cleaning Houston logo" class="h-14 w-auto object-contain rounded-md">
+        <div>
+          <h1 class="text-2xl font-extrabold text-gray-900">S-Cleaning Houston</h1>
           <p class="text-xs text-gray-500 -mt-1">S-Tier Service • Spotless Results</p>
         </div>
       </a>
-
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
         <a class="hover:text-blue-600" href="index.html">Home</a>
         <a class="hover:text-blue-600" href="services.html">Services</a>
@@ -54,10 +49,8 @@
         <a class="hover:text-blue-600" href="contact.html">Contact</a>
         <a class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition" href="tel:+18326566029">Call (832) 656-6029</a>
       </nav>
-
       <button id="mobile-toggle" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
     </div>
-
 
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
       <nav class="flex flex-col gap-3 px-6 py-4">
@@ -95,46 +88,62 @@
           <h4 class="font-semibold text-lg mb-2">Basic Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Routine upkeep: dusting, vacuuming, kitchens & bathrooms.</p>
           <a href="booking.html?service=Basic%20Cleaning" class="text-blue-700 underline">Book Basic</a>
-
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
           <h4 class="font-semibold text-lg mb-2">Deep Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Detailed scrubbing — baseboards, corners, and appliances.</p>
           <a href="booking.html?service=Deep%20Cleaning" class="text-blue-700 underline">Book Deep</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="font-semibold text-lg mb-2">Commercial Cleaning</h4>
+          <p class="text-sm text-gray-600 mb-3">Office janitorial and business cleaning for professional spaces.</p>
+          <a href="contact.html" class="text-blue-700 underline">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-700 mb-8">What Clients Say</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“They left my apartment spotless! Super friendly and fast.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Maria R.</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“Professional and reliable — they’ve been cleaning our office weekly.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Jason T.</span>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700 italic mb-3">“Affordable and detailed! I’ll definitely book again.”</p>
+          <span class="text-sm font-semibold text-blue-700">— Brianna L.</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Footer -->
+  <section class="bg-yellow-400 py-10 text-center text-blue-900 font-semibold">
+    <p class="text-lg">Ready to come home to clean? <a href="booking.html" class="underline">Book your cleaning today</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8 text-center">
+    <p>© <span id="year"></span> S-Cleaning Services Houston</p>
+    <p class="text-sm mt-1">Licensed & Insured • Eco-Friendly Products • Houston, TX</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
           <h4 class="font-semibold text-lg mb-2">Commercial Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Office janitorial and business cleaning for professional spaces.</p>
