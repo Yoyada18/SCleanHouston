@@ -31,6 +31,40 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="/logo1.jpg" alt="S-Cleaning Houston logo" class="h-14 w-auto object-contain rounded-md">
+        <div>
+          <h1 class="text-2xl font-extrabold text-gray-900">S-Cleaning Houston</h1>
+          <p class="text-xs text-gray-500 -mt-1">S-Tier Service • Spotless Results</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
+        <a class="hover:text-blue-600" href="index.html">Home</a>
+        <a class="hover:text-blue-600" href="services.html">Services</a>
+        <a class="hover:text-blue-600" href="about.html">About</a>
+        <a class="hover:text-blue-600" href="booking.html">Book</a>
+        <a class="hover:text-blue-600" href="contact.html">Contact</a>
+        <a class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition" href="tel:+18326566029">Call (832) 656-6029</a>
+      </nav>
+      <button id="mobile-toggle" class="md:hidden text-2xl" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100" aria-hidden="true">
+      <nav class="flex flex-col gap-3 px-6 py-4">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
+        <a class="font-semibold text-blue-700" href="tel:+18326566029">Call (832) 656-6029</a>
+      </nav>
+    </div>
+  </header>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
   <!-- Hero Section -->
   <section class="relative hero overflow-hidden text-center flex flex-col justify-center items-center h-[85vh] md:h-[90vh]">
     <video autoplay muted loop playsinline poster="images/hero-clean.jpg" id="heroVideo" class="absolute w-full h-full object-cover">
