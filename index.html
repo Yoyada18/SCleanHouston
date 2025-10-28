@@ -1,11 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Houston Residential & Office Cleaning | S-Cleaning Houston</title>
+  <meta name="description" content="Professional residential and office cleaning services in Houston. Eco-friendly, reliable, and trusted by hundreds of homeowners." />
+  <link rel="canonical" href="https://scleaninghouston.com/">
+
+  <meta property="og:title" content="Houston’s Trusted Cleaning Services | S-Cleaning Houston">
+  <meta property="og:description" content="Affordable, reliable cleaning services for homes and offices in Houston. Book online or call today!">
   <meta property="og:image" content="https://scleaninghouston.com/images/social-preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
+
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .hero::after {
       content: "";
-@@ -31,121 +31,88 @@
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 1;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+
+
+
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -13,12 +41,11 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="/logo1.jpg" alt="S-Cleaning Houston logo" class="h-14 w-auto object-contain rounded-md">
-        <div>
-          <h1 class="text-2xl font-extrabold text-gray-900">S-Cleaning Houston</h1>
+@@ -47,149 +41,111 @@
           <p class="text-xs text-gray-500 -mt-1">S-Tier Service • Spotless Results</p>
         </div>
       </a>
+
       <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
         <a class="hover:text-blue-600" href="index.html">Home</a>
         <a class="hover:text-blue-600" href="services.html">Services</a>
@@ -27,8 +54,10 @@
         <a class="hover:text-blue-600" href="contact.html">Contact</a>
         <a class="bg-yellow-500 text-blue-900 px-3 py-2 rounded-md font-semibold hover:bg-yellow-600 transition" href="tel:+18326566029">Call (832) 656-6029</a>
       </nav>
+
       <button id="mobile-toggle" class="md:hidden text-2xl" aria-label="Open menu">☰</button>
     </div>
+
 
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
       <nav class="flex flex-col gap-3 px-6 py-4">
@@ -66,16 +95,71 @@
           <h4 class="font-semibold text-lg mb-2">Basic Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Routine upkeep: dusting, vacuuming, kitchens & bathrooms.</p>
           <a href="booking.html?service=Basic%20Cleaning" class="text-blue-700 underline">Book Basic</a>
+
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
           <h4 class="font-semibold text-lg mb-2">Deep Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Detailed scrubbing — baseboards, corners, and appliances.</p>
           <a href="booking.html?service=Deep%20Cleaning" class="text-blue-700 underline">Book Deep</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
           <h4 class="font-semibold text-lg mb-2">Commercial Cleaning</h4>
           <p class="text-sm text-gray-600 mb-3">Office janitorial and business cleaning for professional spaces.</p>
           <a href="contact.html" class="text-blue-700 underline">Request Quote</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </div>
     </div>
@@ -111,6 +195,8 @@
   <footer class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8 text-center">
     <p>© <span id="year"></span> S-Cleaning Services Houston</p>
     <p class="text-sm mt-1">Licensed & Insured • Eco-Friendly Products • Houston, TX</p>
+
+
   </footer>
 
   <script>
